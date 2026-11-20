@@ -26,10 +26,12 @@ export function GET() {
 ${urls}
 </urlset>`;
 
-  return new Response(body, {
+  return new Response(`${body}\n`, {
+    status: 200,
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      "Cache-Control": "public, max-age=0, must-revalidate",
+      "X-Content-Type-Options": "nosniff",
     },
   });
 }

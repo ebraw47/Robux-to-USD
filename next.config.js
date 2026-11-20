@@ -264,11 +264,36 @@ const nextConfig = {
   // Optimize headers
   async headers() {
     return [
-      // HTML pages: always revalidate so Googlebot gets fresh content.
-      // Exclude /_next/static so Next.js can manage hashed-asset caching
-      // (custom Cache-Control there breaks HMR in development).
+      // Sitemaps: plain XML only — no CSP (CSP breaks browser XML viewers / some crawlers).
       {
-        source: '/((?!_next/static|_next/image).*)',
+        source: '/sitemap-index.xml',
+        headers: [
+          { key: 'Content-Type', value: 'application/xml; charset=utf-8' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+        ],
+      },
+      {
+        source: '/index.xml',
+        headers: [
+          { key: 'Content-Type', value: 'application/xml; charset=utf-8' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+        ],
+      },
+      {
+        source: '/image-sitemap.xml',
+        headers: [
+          { key: 'Content-Type', value: 'application/xml; charset=utf-8' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+        ],
+      },
+      // HTML pages: always revalidate so Googlebot gets fresh content.
+      // Exclude /_next/static and sitemap XML so Next can cache assets and
+      // sitemaps stay CSP-free for crawlers/browsers.
+      {
+        source: '/((?!_next/static|_next/image|sitemap-index\\.xml|index\\.xml|image-sitemap\\.xml).*)',
         headers: [
           {
             key: 'Cache-Control',
