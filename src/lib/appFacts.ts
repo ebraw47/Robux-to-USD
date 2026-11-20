@@ -2,6 +2,7 @@ import { imageObjectLicensing, SITE_ORIGIN } from "@/lib/schemaImageLicensing";
 import {
   BRAND_LOGO,
   CONTACT_EMAIL,
+  FACEBOOK_URL,
   SITE_NAME,
   SITE_RATING,
   SITE_TAGLINE,
@@ -24,7 +25,7 @@ export const ORGANIZATION_JSON_LD = {
   logo: `${SITE_ORIGIN}${BRAND_LOGO}`,
   email: CONTACT_EMAIL,
   description: SITE_TAGLINE,
-  sameAs: [] as string[],
+  sameAs: [FACEBOOK_URL],
 };
 
 export const WEB_APPLICATION_JSON_LD = {

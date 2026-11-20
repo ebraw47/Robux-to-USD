@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import CtaButton from '@/components/CtaButton';
-import { CONTACT_EMAIL, SITE_DOMAIN, SITE_NAME, SITE_TAGLINE } from '@/lib/siteConfig';
+import {
+  CONTACT_EMAIL,
+  FACEBOOK_URL,
+  SITE_DOMAIN,
+  SITE_NAME,
+  SITE_TAGLINE,
+} from '@/lib/siteConfig';
 
 export default function Footer() {
   return (
@@ -16,6 +22,26 @@ export default function Footer() {
             >
               {CONTACT_EMAIL}
             </a>
+            <div className="mt-4">
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-ink/10 bg-ink/[0.03] px-3 py-2 text-sm font-semibold text-ink/80 transition hover:border-teal/40 hover:text-teal-deep"
+                aria-label="Robux to USD on Facebook"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-4 w-4 text-[#1877F2]"
+                  aria-hidden="true"
+                >
+                  <path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H8.08v-2.91h2.36V9.84c0-2.34 1.39-3.63 3.52-3.63 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.16 0-1.52.72-1.52 1.46v1.76h2.59l-.41 2.91h-2.18V22c4.78-.76 8.44-4.92 8.44-9.94z" />
+                </svg>
+                Facebook
+              </a>
+            </div>
           </div>
 
           <div>

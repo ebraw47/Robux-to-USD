@@ -6,6 +6,8 @@ export const SITE_TAGLINE =
   "Free Robux to USD calculator — estimate buy cost on web, gift cards, and mobile, then compare official DevEx cashout value.";
 
 export const CONTACT_EMAIL = "support@robuxtousd.net";
+export const FACEBOOK_URL =
+  "https://www.facebook.com/share/196AaTq5ea/?mibextid=wwXIfr";
 
 /** Bump this when replacing public images so browsers skip stale cached files. */
 export const ASSET_VERSION = "20261120-r2u5";
