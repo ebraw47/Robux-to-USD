@@ -1,0 +1,36 @@
+{
+  "name": "Robux to USD",
+  "short_name": "Robux to USD",
+  "description": "Free Robux to USD calculator — estimate Robux buy cost on web, gift cards and mobile, plus DevEx cashout value and the 30% marketplace fee. Unofficial.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F3F7F6",
+  "theme_color": "#0D9488",
+  "lang": "en-US",
+  "categories": ["finance", "utilities", "games"],
+  "icons": [
+    {
+      "src": "/favicon.ico?v=20261120-r2u5",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/android-chrome-192x192.png?v=20261120-r2u5",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=20261120-r2u5",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=20261120-r2u5",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
