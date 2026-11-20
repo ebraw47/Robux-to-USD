@@ -22,6 +22,8 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // Common typo submitted in Search Console
+      { source: '/image-sitemp.xml', destination: '/image-sitemap.xml', permanent: true },
       // Prior-brand / retired routes → Robux to USD IA
       { source: '/funciones', destination: '/', permanent: true },
       { source: '/features', destination: '/', permanent: true },
